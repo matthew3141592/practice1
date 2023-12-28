@@ -1,8 +1,15 @@
+let navBarOpen = false
 function navBarToggle() {
-    document.getElementById('navBar').style.visibility = 'visible'
-    document.getElementById('navBar').style.width = '70%'
-    document.getElementById('navHome').style.width = '50%'
-    document.getElementById('navContact').style.width = '50%'
-    document.getElementById('navJoin').style.width = '50%'
-    document.getElementById('logo').style.paddingRight = '0'
+    if (navBarOpen == false) {
+    document.getElementById('navBar').style.transitionProperty = 'opacity'
+    document.getElementById('navBar').style.transitionDuration = '0.5s'
+    document.getElementById('navBar').style.opacity = '1.0'
+    navBarOpen = true
+    }
+    else if (navBarOpen == true) {
+        document.getElementById('navBar').style.transitionProperty = 'opacity'
+        document.getElementById('navBar').style.transitionDuration = '0.5s'
+        document.getElementById('navBar').style.opacity = '0'
+        navBarOpen = false
+    }
 }
